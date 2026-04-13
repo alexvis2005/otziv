@@ -197,25 +197,20 @@
         <h2>дорогие участники!</h2>
         
         <div class="intro-text">
-            <p>Поздравляем вас с прохождением пасхального квеста! 🎉</p>
+            <p>Поздравляем вас с прохождением пасхального квеста!</p>
             <p>Нам очень важно знать ваше мнение о конкурсе, заданиях и организации. Поделитесь своими впечатлениями, пожеланиями или просто пасхальной радостью — мы будем благодарны каждому отзыву.</p>
             <p>✞ Ваш отзыв поможет сделать будущие праздники ещё лучше ✞</p>
         </div>
 
-        <!-- ================================================== -->
-        <!-- === ВСТАВЬТЕ СЮДА HTML-КОД ВАШЕЙ GOOGLE ФОРМЫ === -->
-        <!-- ================================================== -->
         <div class="form-container">
-<iframe src="https://docs.google.com/forms/d/e/1FAIpQLScZYX3rUbc8g6mC3d6Shuz7eaIuNoxpF_8tvXZZIFxycXIA_w/viewform?embedded=true" width="640" height="1542" frameborder="0" marginheight="0" marginwidth="0">Загрузка…</iframe>
-            <iframe src="https://docs.google.com/forms/d/e/ВАША_ССЫЛКА/viewform?embedded=true" 
+            <iframe src="https://docs.google.com/forms/d/e/1FAIpQLScZYX3rUbc8g6mC3d6Shuz7eaIuNoxpF_8tvXZZIFxycXIA_w/viewform?embedded=true" 
                     width="100%" 
-                    height="680" 
+                    height="1714" 
                     frameborder="0" 
                     marginheight="0" 
                     marginwidth="0">
                 Загрузка формы...
             </iframe>
-            <!-- ================================================== -->
         </div>
 
         <div class="qr-sticker">
@@ -234,17 +229,14 @@
 </div>
 
 <script>
-    // Небольшой скрипт для динамической подстройки высоты iframe (опционально)
-    // Если форма обрезается, можно раскомментировать код ниже
-    
-    // function adjustIframeHeight() {
-    //     const iframe = document.querySelector('.form-container iframe');
-    //     if (iframe && iframe.contentWindow) {
-    //         // Можно установить фиксированную высоту или пытаться получить
-    //         iframe.style.height = '700px';
-    //     }
-    // }
-    // window.addEventListener('load', adjustIframeHeight);
+    // Динамическая подстройка высоты iframe под содержимое
+    function adjustIframeHeight() {
+        const iframe = document.querySelector('.form-container iframe');
+        if (iframe && iframe.contentWindow) {
+            iframe.style.height = '1714px';
+        }
+    }
+    window.addEventListener('load', adjustIframeHeight);
 </script>
 
 </body>
