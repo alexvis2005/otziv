@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes, viewport-fit=cover">
+    <title>Пасхальный квест | Отзывы и впечатления</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Georgia', 'Times New Roman', serif;
+            min-height: 100vh;
+            padding: 16px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            background: #120b05;
+            overflow-x: hidden;
+        }
+
+        .animated-bg {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 0;
+            overflow: hidden;
+        }
+
+        .bg-glow {
+            position: absolute;
+            width: 200%;
+            height: 200%;
+            top: -50%;
+            left: -50%;
+            background: radial-gradient(circle at 30% 40%, rgba(255, 190, 80, 0.12), rgba(160, 85, 20, 0.05), transparent 70%);
+            animation: fastRotate 20s linear infinite;
+        }
+
+        @keyframes fastRotate {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        .floating-particle {
+            position: absolute;
+            background: rgba(255, 205, 130, 0.25);
+            border-radius: 50%;
+            pointer-events: none;
+            filter: blur(4px);
+            animation: fastFloat 8s infinite ease-in-out;
+        }
+
+        @keyframes fastFloat {
+            0%, 100% { transform: translateY(0) translateX(0) scale(1); opacity: 0.2; }
+            50% { transform: translateY(-50px) translateX(25px) scale(1.3); opacity: 0.4; }
+        }
+
+        .site-card {
+            max-width: 700px;
+            width: 100%;
+            margin: 0 auto;
+            background: rgba(255, 252, 245, 0.97);
+            backdrop-filter: blur(2px);
+            border-radius: 48px;
+            box-shadow: 0 30px 50px rgba(0, 0, 0, 0.3), 0 0 0 1px rgba(255, 215, 150, 0.3);
+            overflow: hidden;
+            position: relative;
+            z-index: 2;
+        }
+
+        .easter-header {
+            background: linear-gradient(135deg, #b55a1a, #7a3a0c);
+            padding: 24px 16px 20px;
+            text-align: center;
+            color: #ffefcf;
+            border-bottom: 3px solid #e6b87e;
+        }
+
+        .easter-header h1 {
+            font-size: 1.6rem;
+            letter-spacing: 2px;
+            font-family: 'Georgia', 'Times New Roman', serif;
+            font-weight: normal;
+            text-shadow: 1px 1px 0 #4a2800;
+            margin: 6px 0;
+        }
+
+        .greeting {
+            font-size: 1rem;
+            font-style: italic;
+        }
+
+        .page {
+            padding: 28px 24px;
+            background: #fffcf5;
+        }
+
+        h2 {
+            font-family: 'Georgia', 'Times New Roman', serif;
+            color: #9b4a1a;
+            letter-spacing: 0.5px;
+            border-left: 4px solid #d69648;
+            padding-left: 14px;
+            margin-bottom: 16px;
+            font-size: 1.3rem;
+        }
+
+        .intro-text {
+            font-size: 0.95rem;
+            line-height: 1.5;
+            color: #2c241a;
+            margin-bottom: 24px;
+        }
+
+        .intro-text p {
+            margin-bottom: 12px;
+        }
+
+        .form-container {
+            background: #fef4e8;
+            border-radius: 36px;
+            padding: 20px;
+            margin: 16px 0;
+            border: 1px solid #f0dcbf;
+            overflow-x: auto;
+        }
+
+        .form-container iframe {
+            width: 100%;
+            border: none;
+            border-radius: 28px;
+            background: transparent;
+        }
+
+        .qr-sticker {
+            background: #efe2cf;
+            border-radius: 28px;
+            padding: 14px 18px;
+            text-align: center;
+            font-size: 0.85rem;
+            margin-top: 24px;
+            border: 1px solid #e2cbaa;
+            color: #5f3e1c;
+        }
+
+        .footer-small {
+            text-align: center;
+            font-size: 0.65rem;
+            padding: 14px;
+            background: #f9efdf;
+            color: #9b6a3a;
+            border-top: 1px solid #f0e0c8;
+        }
+
+        .blessing {
+            text-align: center;
+            margin-top: 20px;
+            font-size: 0.9rem;
+            color: #b55a1a;
+            font-style: italic;
+        }
+
+        @media (max-width: 550px) {
+            body { padding: 12px; }
+            .page { padding: 20px 16px; }
+            .easter-header h1 { font-size: 1.3rem; }
+            h2 { font-size: 1.1rem; padding-left: 10px; }
+            .form-container { padding: 12px; }
+        }
+    </style>
+</head>
+<body>
+
+<div class="animated-bg">
+    <div class="bg-glow"></div>
+    <div class="floating-particle" style="width: 180px; height: 180px; top: 10%; left: -5%; animation-duration: 7s;"></div>
+    <div class="floating-particle" style="width: 250px; height: 250px; bottom: 5%; right: -10%; animation-duration: 9s; opacity: 0.15;"></div>
+    <div class="floating-particle" style="width: 120px; height: 120px; top: 60%; left: 80%; animation-duration: 6s;"></div>
+    <div class="floating-particle" style="width: 90px; height: 90px; top: 20%; left: 70%; animation-duration: 7.5s;"></div>
+    <div class="floating-particle" style="width: 200px; height: 200px; bottom: 30%; left: -8%; animation-duration: 10s; opacity: 0.1;"></div>
+</div>
+
+<div class="site-card">
+    <div class="easter-header">
+        <h1>ХРИСТОС ВОСКРЕСЕ</h1>
+        <div class="greeting">Пасхальный конкурс</div>
+    </div>
+
+    <div class="page">
+        <h2>дорогие участники!</h2>
+        
+        <div class="intro-text">
+            <p>Поздравляем вас с прохождением пасхального квеста! 🎉</p>
+            <p>Нам очень важно знать ваше мнение о конкурсе, заданиях и организации. Поделитесь своими впечатлениями, пожеланиями или просто пасхальной радостью — мы будем благодарны каждому отзыву.</p>
+            <p>✞ Ваш отзыв поможет сделать будущие праздники ещё лучше ✞</p>
+        </div>
+
+        <!-- ================================================== -->
+        <!-- === ВСТАВЬТЕ СЮДА HTML-КОД ВАШЕЙ GOOGLE ФОРМЫ === -->
+        <!-- ================================================== -->
+        <div class="form-container">
+<iframe src="https://docs.google.com/forms/d/e/1FAIpQLScZYX3rUbc8g6mC3d6Shuz7eaIuNoxpF_8tvXZZIFxycXIA_w/viewform?embedded=true" width="640" height="1542" frameborder="0" marginheight="0" marginwidth="0">Загрузка…</iframe>
+            <iframe src="https://docs.google.com/forms/d/e/ВАША_ССЫЛКА/viewform?embedded=true" 
+                    width="100%" 
+                    height="680" 
+                    frameborder="0" 
+                    marginheight="0" 
+                    marginwidth="0">
+                Загрузка формы...
+            </iframe>
+            <!-- ================================================== -->
+        </div>
+
+        <div class="qr-sticker">
+            ★ Спасибо, что поделились впечатлениями! ★<br>
+            Ваши отзывы очень важны для нас. Храните пасхальную радость в сердце весь год!
+        </div>
+        
+        <div class="blessing">
+            ✞ Христос Воскресе! Воистину Воскресе! ✞
+        </div>
+    </div>
+
+    <div class="footer-small">
+        Пасхальный квест | С любовью и молитвой
+    </div>
+</div>
+
+<script>
+    // Небольшой скрипт для динамической подстройки высоты iframe (опционально)
+    // Если форма обрезается, можно раскомментировать код ниже
+    
+    // function adjustIframeHeight() {
+    //     const iframe = document.querySelector('.form-container iframe');
+    //     if (iframe && iframe.contentWindow) {
+    //         // Можно установить фиксированную высоту или пытаться получить
+    //         iframe.style.height = '700px';
+    //     }
+    // }
+    // window.addEventListener('load', adjustIframeHeight);
+</script>
+
+</body>
+</html>
